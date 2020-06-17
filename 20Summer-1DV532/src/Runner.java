@@ -1,6 +1,3 @@
-
-
-//helllo
 public class Runner {
 
 	
