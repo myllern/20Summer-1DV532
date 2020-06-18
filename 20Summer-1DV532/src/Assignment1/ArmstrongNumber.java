@@ -1,6 +1,5 @@
 package Assignment1;
 
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -24,20 +23,30 @@ public class ArmstrongNumber {
 					for (int h = 0; h < nrD; h++) {
 						sum = sum + ((int) Math.pow(Integer.parseInt(String.valueOf(nrS.charAt(h))), nrD));
 						if (sum == Integer.parseInt(nrS)) {
-							
-							
-							if (temp != sum) { 
+
+							if (temp != sum) {
 								System.out.println(sum);
 								temp = sum;
 							}
 						}
 					}
 				}
-				fin = false;
+				fin = true;
+				System.out.print("Do you want to repeat? (Y/N) :");
+
+				do {
+
+					String yN = scan.nextLine();
+
+					System.out.println();
+					System.out.print("Can only read Y/N");
+					System.out.println();
+
+				} while (fin);
 
 			} catch (InputMismatchException e) {
 				System.out.println();
-				System.out.print("NUMBERS only...");
+				System.out.print("Numbers only...");
 				System.out.println();
 				scan.nextLine();
 			}
