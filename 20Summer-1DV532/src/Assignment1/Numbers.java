@@ -28,7 +28,6 @@ public class Numbers {
 				} else {
 					System.out.println("Enter ONLY a three-digit integer number, please:");
 
-					
 				}
 
 			} catch (InputMismatchException e) {
