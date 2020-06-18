@@ -1,10 +1,8 @@
 package Assignment1;
 
-import java.util.ArrayList;
-import java.util.Stack;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class ArmstrongNumber {
 	public static void main(String[] args) {
