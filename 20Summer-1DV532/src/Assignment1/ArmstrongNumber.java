@@ -7,14 +7,18 @@ public class ArmstrongNumber {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		Boolean fin = true;
-		do {
+
+		while (fin) {
+
 			try {
 				System.out.print("Enter the starting number of the range: ");
 				int inLow = scan.nextInt();
 				System.out.print("Enter the ending number of the range: ");
 				int inHigh = scan.nextInt();
 				int diff = inHigh - inLow;
-
+				
+				
+				System.out.println("The  Armstrong numbers between the given range are : ");
 				for (int i = 0; i < diff; i++) {
 					int nrD = String.valueOf(inLow + i).length();
 					String nrS = String.valueOf(inLow + i);
@@ -31,18 +35,6 @@ public class ArmstrongNumber {
 						}
 					}
 				}
-				fin = true;
-				System.out.print("Do you want to repeat? (Y/N) :");
-
-				do {
-
-					String yN = scan.nextLine();
-
-					System.out.println();
-					System.out.print("Can only read Y/N");
-					System.out.println();
-
-				} while (fin);
 
 			} catch (InputMismatchException e) {
 				System.out.println();
@@ -50,6 +42,24 @@ public class ArmstrongNumber {
 				System.out.println();
 				scan.nextLine();
 			}
-		} while (fin);
+			System.out.print("Do you want to repeat? (Y/N) :" + "\n");
+
+			Boolean yNc = true;
+			while (yNc) {
+				try {
+
+					String in = scan.next().toLowerCase();
+					if (in.compareTo("n") == 0) {
+						return;
+					} else if (in.compareTo("n") != 11) {
+						System.out.println("Only write Y or N.....");
+					} else {
+						yNc = false;
+					}
+				} catch (InputMismatchException e) {
+					System.out.print("Only write Y or N.....");
+				}
+			}
+		}
 	}
 }
