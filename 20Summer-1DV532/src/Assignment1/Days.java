@@ -45,12 +45,12 @@ public class Days {
 			scan.close();
 		}
 
-		int [] day = new int[2]; 
-		day[0] = x%7;
+		int[] day = new int[2];
+		day[0] = x % 7;
 		day[1] = (y - x) % 7;
-		
-		String [] wD = new String[2];
-		
+
+		String[] wD = new String[2];
+
 		for (int i = 0; i < 2; i++) {
 
 			switch (day[i]) {
@@ -76,8 +76,8 @@ public class Days {
 				wD[i] = "Saturday";
 				break;
 			}
-		
+
 		}
-		System.out.println("Today is "+ wD[0] + " and the future day is "+ wD[1] + ": ");
+		System.out.println("Today is " + wD[0] + " and the future day is " + wD[1] + ": ");
 	}
 }
